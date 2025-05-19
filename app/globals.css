@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 30 100% 5%;
+  --foreground: 36 30% 80%;
+
+  --card: 30 60% 10%;
+  --card-foreground: 36 30% 80%;
+
+  --popover: 30 60% 10%;
+  --popover-foreground: 36 30% 80%;
+
+  --primary: 120 35% 46%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 50% 31%;
+  --secondary-foreground: 36 30% 80%;
+
+  --muted: 30 30% 15%;
+  --muted-foreground: 36 10% 60%;
+
+  --accent: 30 50% 31%;
+  --accent-foreground: 36 30% 80%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 36 30% 80%;
+
+  --border: 30 40% 15%;
+  --input: 30 40% 15%;
+  --ring: 120 35% 46%;
+
+  --radius: 0.5rem;
+
+  --chart-1: 120 35% 46%;
+  --chart-2: 30 50% 31%;
+  --chart-3: 36 30% 80%;
+  --chart-4: 0 63% 31%;
+  --chart-5: 30 30% 15%;
+}
+
+.dark {
+  --background: 30 100% 5%;
+  --foreground: 36 30% 80%;
+
+  --card: 30 60% 10%;
+  --card-foreground: 36 30% 80%;
+
+  --popover: 30 60% 10%;
+  --popover-foreground: 36 30% 80%;
+
+  --primary: 120 35% 46%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 50% 31%;
+  --secondary-foreground: 36 30% 80%;
+
+  --muted: 30 30% 15%;
+  --muted-foreground: 36 10% 60%;
+
+  --accent: 30 50% 31%;
+  --accent-foreground: 36 30% 80%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 36 30% 80%;
+
+  --border: 30 40% 15%;
+  --input: 30 40% 15%;
+  --ring: 120 35% 46%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Animaciones personalizadas para el Goblin Clicker */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-ripple {
+  animation: ripple 0.5s ease-out forwards;
+}
+
+.animate-floatUp {
+  animation: floatUp 0.5s ease-out forwards;
+}
+
+.animate-click {
+  animation: click 0.4s ease-out;
+}
+
+@keyframes click {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.85);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
